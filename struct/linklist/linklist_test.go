@@ -3,7 +3,7 @@ package linklist_test
 import (
 	"testing"
 
-	"github.com/Aidanwangcy/leetcode/struct/linklist"
+	"github.com/Aidanwangcy/LeetCodeInGo/struct/linklist"
 )
 
 func TestLen(t *testing.T) {

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Aidanwangcy/leetcode/struct/binarytree"
+	"github.com/Aidanwangcy/LeetCodeInGo/struct/binarytree"
 )
 
 func main() {

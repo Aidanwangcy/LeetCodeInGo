@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Aidanwangcy/leetcode/struct/mysort"
+	"github.com/Aidanwangcy/LeetCodeInGo/struct/mysort"
 )
 
 func Testquicksort1(t *testing.T) {
