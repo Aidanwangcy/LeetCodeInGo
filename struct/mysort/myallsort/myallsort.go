@@ -1,4 +1,4 @@
-package mysort
+package myallsort
 
 //快速排序
 //partition 分区操作， pivot为基准
