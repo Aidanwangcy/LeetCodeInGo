@@ -6,36 +6,27 @@ func QsortInt(nums []int) []int {
 }
 
 func qsort(nums []int, left, right int) {
-	if left >= right {
-		return
+	if left < right {
+		partitionIndex := partation(nums, left, right)
+		qsort(nums, left, partitionIndex-1)
+		qsort(nums, partitionIndex+1, right)
 	}
-	p := partation(nums, left, right)
-	qsort(nums, left, p-1)
-	qsort(nums, p+1, right)
 }
 
 func partation(nums []int, left, right int) int {
-	i, j := left, right
-	p := left
-	temp := nums[p]
-	for i < j {
-		for i <= p && nums[i] <= temp {
-			i++
-		}
-		if i <= p {
-			nums[p] = nums[i]
-			p = i
-		}
-		for j >= p && nums[j] >= temp {
-			j--
-		}
-		if j >= p {
-			nums[p] = nums[j]
-			p = j
+	pivot := left
+	beginIndex := pivot + 1
+	for i := beginIndex; i <= right; i++ {
+		if nums[i] < nums[pivot] {
+			swap(nums, i, beginIndex)
+			beginIndex++
 		}
 	}
-	nums[p] = temp
-	return p
+	//beginIndex-1的位置比pivot小所以更换到最左没有影响，保证左侧都为最小
+	swap(nums, pivot, beginIndex-1)
+	return beginIndex - 1
 }
 
-
+func swap(nums []int, i, j int) {
+	nums[i], nums[j] = nums[j], nums[i]
+}
