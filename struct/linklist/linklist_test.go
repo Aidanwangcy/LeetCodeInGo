@@ -2,12 +2,10 @@ package linklist
 
 import (
 	"testing"
-
-	"github.com/Aidanwangcy/LeetCodeInGo/struct/linklist"
 )
 
 func TestLen(t *testing.T) {
-	l := linklist.New()
+	l := New()
 	l.Append(1)
 	l.Append(2)
 	if ans := l.Len(); ans != 3 {
