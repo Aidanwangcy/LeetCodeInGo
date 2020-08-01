@@ -1,8 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"runtime/trace"
+)
 
 func main() {
+	//go tool trace trace.out 运行后使用这条命令查看go gc过程
+	f, err := os.Create("trace.out")
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	err = trace.Start(f)
+	if err != nil {
+		panic(err)
+	}
+	defer trace.Stop()
+	//////////////////////////////
 	var nums = []int{0, 2, 3, 4, 5, 6, 7, 9}
 	ans := missingNumber(nums)
 	fmt.Println(ans)

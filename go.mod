@@ -1,4 +1,4 @@
-module github.com/Aidanwangcy/LeetCodeInGo
+module github.com/aidancy/LeetCodeInGo
 
 go 1.14
 
