@@ -1,6 +1,6 @@
-package main
+package depth
 
-import "github.com/Aidanwangcy/LeetCodeInGo/struct/binarytree"
+import "github.com/aidancy/LeetCodeInGo/struct/binarytree"
 
 //MaxDepth dfs递归
 func MaxDepth(root *binarytree.TreeNode) int {

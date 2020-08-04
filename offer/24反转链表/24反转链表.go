@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/Aidanwangcy/LeetCodeInGo/struct/linklist"
+	"github.com/aidancy/LeetCodeInGo/struct/linklist"
 )
 
 func main() {

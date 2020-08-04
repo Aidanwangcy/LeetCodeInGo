@@ -1,9 +1,9 @@
-package main
+package depth
 
 import (
 	"testing"
 
-	"github.com/Aidanwangcy/LeetCodeInGo/struct/binarytree"
+	"github.com/aidancy/LeetCodeInGo/struct/binarytree"
 )
 
 func TestMaxDepth(t *testing.T)  {
